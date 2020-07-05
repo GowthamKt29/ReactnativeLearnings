@@ -17,7 +17,7 @@ function App() {
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <Text>
-       hello react Native
+       hello reactNative
       </Text>
     </View>
   );
