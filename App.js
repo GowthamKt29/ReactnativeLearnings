@@ -1,26 +1,21 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import HomeScreen from './src/screens/HomeScreen';
+import ComponentsScreen from './src/screens/ComponentScreen';
+import ListScreen from './src/screens/ListScreen';
 
-import React from 'react';
-import {
-  View,
-  Text,
-} from 'react-native';
+const navigator = createStackNavigator(
+  {
+    Home: HomeScreen,
+    Components: ComponentsScreen,
+    List:ListScreen,
+  },
+  {
+    initialRouteName: 'List',
+    defaultNavigationOptions: {
+      title: 'App',
+    },
+  }
+);
 
-
-function App() {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>
-       hello reactNative Gowtham
-      </Text>
-    </View>
-  );
-}
-
-export default App;
+export default createAppContainer(navigator);
