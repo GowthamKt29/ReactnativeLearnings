@@ -2,7 +2,7 @@ import React from 'react'
 import {Text,StyleSheet,View,Button,style} from 'react-native'
 
 const HomeScreen=({navigation})=>{
-    const listItems=['Go to ComponentScreen','Go to ListScreen','Go to ImageScreen']
+    const listItems=['Go to ComponentScreen','Go to ListScreen','Go to ImageScreen','Go to CounterScreen']
     function Separator() {
         return <View style={styles.separator} />;
       }
@@ -19,6 +19,11 @@ return <View>
     <Separator />
     <Button title={listItems[2]} onPress={()=>{
         navigation.navigate('Image')
+        }}>
+        </Button>
+        <Separator />
+    <Button title={listItems[3]} onPress={()=>{
+        navigation.navigate('Counter')
         }}>
         </Button>
 </View>
