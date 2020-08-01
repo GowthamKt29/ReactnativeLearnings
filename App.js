@@ -7,21 +7,17 @@ import ImageScreen from './src/screens/ImageScreen';
 import CounterScreen from './src/screens/CounterScreen'
 import ColorChangeScreen from './src/screens/ColorChangeScreen'
 import SquareScreen from './src/screens/SquareScreen'
+import BoxScreen from './src/screens/BoxScreen'
+import SearchScreen from './src/Food/Screens/SearchScreen'
 
 const navigator = createStackNavigator(
   {
-    Home: HomeScreen,
-    Components: ComponentsScreen,
-    List:ListScreen,
-    Image:ImageScreen,
-    Counter:CounterScreen,
-    Color:ColorChangeScreen,
-    Square:SquareScreen,
+    Search:SearchScreen
   },
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'Search',
     defaultNavigationOptions: {
-      title: 'App',
+      title: 'Buisness search',
     },
   }
 );
